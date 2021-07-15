@@ -58,7 +58,7 @@ int main()
     cout<<"After pushing elements at front......"<<endl;
     print(head);
 
-     int l=0;
+    int l=0;
     for (int i = 0; i < 5; i++)
     {
         cin>>l;

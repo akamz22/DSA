@@ -23,6 +23,5 @@ int main()
     {
         temp1 = temp1->next;
     }
-
     return 0;
 }

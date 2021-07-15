@@ -11,7 +11,8 @@ Node *head;
 
 /* Given a reference (pointer to pointer)
 to the head of a list and an int, inserts
-a new node on at nition p of the list. */
+a new node on at nition p of the list.*/
+
 void push(int data, int n)
 {
     Node *temp1 = new Node();
@@ -19,10 +20,11 @@ void push(int data, int n)
     temp1->data = data;
 
     temp1->next = NULL;
+    Node *head1=head;
     if (n == 1)
     {
-        temp1->next = head;
-        head = temp1;
+        temp1->next = head1;
+        head1 = temp1;
         return;
     }
 
@@ -48,7 +50,7 @@ void print()
 
 int main()
 {
-    head = NULL;
+    //head = NULL;
     push(7, 1);
     push(8, 2);
     push(9, 3);

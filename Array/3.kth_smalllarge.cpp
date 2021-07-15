@@ -1,6 +1,6 @@
 //Find the maximum and minimum element in an array
 #include <iostream>
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
