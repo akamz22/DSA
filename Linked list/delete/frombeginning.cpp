@@ -32,15 +32,15 @@ void deleteFromEnd(Node **head)
 }
 void deleteFromPosition(Node **head_ref, int position)
 {
-    for (int i = 0; i < position-1; i++)
+    for (int i = 0; i < position - 1; i++)
     {
         if ((*head_ref)->next != NULL)
         {
             (*head_ref) = (*head_ref)->next;
         }
     }
-    cout<<endl;
-    cout<<"In head_ref : "<<(*head_ref)->data<<endl;
+    cout << endl;
+    cout << "In head_ref : " << (*head_ref)->data << endl;
     (*head_ref)->next = (*head_ref)->next->next;
 }
 int main()
@@ -78,9 +78,11 @@ int main()
     deleteFromEnd(&temp);
     printlist(head);
 
-
     cout << "\nAfter deleting element from position list is...." << endl;
-    deleteFromPosition(&temp,1);
+    deleteFromPosition(&temp, 1);
     printlist(head);
     return 0;
 }
+
+
+

@@ -32,45 +32,51 @@ void print(Node *temp)
     }
 }
 
+int size(Node *temp)
+{
+    int count = 0;
+    while (temp != NULL)
+    {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+int middleElement(int size, Node *head_ref)
+{
+    int middle = 0;
+    int mid=size/2;
+    for (int i = 1; i <= size-1; i++)
+    {
+        head_ref = head_ref->next;
+    }
+    middle = head_ref->data;
+    return middle;
+}
 int main()
 {
-    
- 
 
     Node *temp = NULL;
-
-    // temp = new Node();
     temp = head;
 
-    cout<<"Before pushing elements....."<<endl;
+    cout << "Before pushing elements....." << endl;
     print(temp);
-
 
     push(7);
     push(8);
     push(9);
-    push(40);
+    push(40); //middle element
     push(10);
     push(12);
     push(13);
-    
-    
-    cout<<"After pushing elements at front......"<<endl;
+
+    cout << "After pushing elements at front......" << endl;
     print(head);
 
-    int l=0;
-    for (int i = 0; i < 5; i++)
-    {
-        cin>>l;
-        push(l);
-    }
-    
+    cout << "\nSize of linked list is :" << size(head) << endl;
 
-    cout<<"After pushing more elements at front......"<<endl;
-    print(head);
-
-    
-
-
+    int n = size(head);
+    int mid = middleElement(n, head);
+    cout << "Middle element is : " << mid << endl;
     return 0;
 }
