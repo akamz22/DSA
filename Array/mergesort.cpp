@@ -50,6 +50,5 @@ int main()
     {
         printf("%d ", arr1[i]);
     }
-    
     return 0;
 }

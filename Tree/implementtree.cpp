@@ -38,7 +38,7 @@ void printInorder(Node *node)
     printInorder(node->left);
     cout << node->data << " ";
     printInorder(node->right);
-}
+} 
 int main()
 {
 

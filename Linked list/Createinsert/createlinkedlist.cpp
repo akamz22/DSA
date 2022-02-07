@@ -31,6 +31,7 @@ int main()
         cout << head->data << endl;
         head = head->next;
     }
+    
 
     return 0;
 }

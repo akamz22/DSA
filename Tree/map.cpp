@@ -8,15 +8,7 @@ int32_t main()
   for (int i = 0; i < v.size(); i++)
   {
 
-    if (M.find(v[i]) == M.end())
-    {
-      M[v[i]] = 1;
-    }
-
-    else
-    {
-      M[v[i]]++;
-    }
+    M.insert(pair<int, int>(i+1, v[i]));
   }
 
   for (auto i : M)

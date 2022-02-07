@@ -24,7 +24,7 @@ int main()
         //     arr1[2]++;
         // }
     }
-    int k = 0;
+    //int k = 0;
     for (i = 0; i < 3; i++)
     {
         int k = arr1[i];

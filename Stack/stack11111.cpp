@@ -1,16 +1,15 @@
 #include <iostream>
-#define n 1000000000
+#define n 1000
 using namespace std;
-
-class stack
+class stack2
 {
-    int *arr;
+private:
+    int arr[n];
     int top;
 
 public:
-    stack()
+    stack2()
     {
-        arr = new int[n];
         top = -1;
     }
     void push(int x)
@@ -22,15 +21,6 @@ public:
         top++;
         arr[top] = x;
     }
-    void pop()
-    {
-        if (top <= -1)
-        {
-            cout << "No element to pop" << endl;
-            return;
-        }
-        top--;
-    }
     int Top()
     {
         if (top <= -1)
@@ -40,6 +30,16 @@ public:
         }
         return arr[top];
     }
+    void pop()
+    {
+
+        if (top <= -1)
+        {
+            cout << "No element in stack" << endl;
+            return;
+        }
+        top--;
+    }
     bool isempty()
     {
         return (top <= -1);
@@ -47,20 +47,13 @@ public:
 };
 int main()
 {
-    stack st;
-    st.push(1);
+    stack2 st;
+    st.push(2);
+    st.push(2);
+    st.push(2);
+    st.push(2);
     st.push(2);
     st.push(3);
-    st.push(4);
-    st.push(5);
     cout << st.Top() << endl;
-    st.pop();
-    cout << st.Top() << endl;
-    cout << "Is atack empty " << st.isempty() << endl;
-    st.pop();
-    st.pop();
-    st.pop();
-    st.pop();
-    cout << "Is atack empty " << st.isempty() << endl;
     return 0;
 }
