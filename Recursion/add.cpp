@@ -9,6 +9,6 @@ int sum(int n)
 using namespace std;
 int main()
 {
-    cout << sum(123452);
+    cout << sum(1234);
     return 0;
 }
