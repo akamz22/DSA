@@ -8,8 +8,8 @@ void subseq(string p, string up)
 {
     if (up.empty())
     {
-        // cout << p << endl;
-        subsets.push_back(p);
+        cout << p << endl;
+        // subsets.push_back(p);
         return;
     }
     char ch = up[0];
@@ -18,10 +18,10 @@ void subseq(string p, string up)
 }
 int main()
 {
-    subseq("", "cab");
-    sort(subsets.begin(), subsets.end());
-    subsets.erase(subsets.begin());
-    for (auto ele : subsets)
-        cout << ele << " ";
+    subseq("", "abc");
+    // sort(subsets.begin(), subsets.end());
+    // subsets.erase(subsets.begin());
+    // for (auto ele : subsets)
+    //     cout << ele << " ";
     return 0;
 }
